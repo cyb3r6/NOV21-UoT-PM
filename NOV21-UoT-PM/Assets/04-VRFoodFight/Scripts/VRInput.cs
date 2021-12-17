@@ -10,13 +10,17 @@ public class VRInput : MonoBehaviour
 
     public float gripValue;
 
+    public Vector3 velocity;
+    public Vector3 angularVelocity;
+
     public UnityEvent OnGripDown;
     public UnityEvent OnGripUp;
 
     private string gripAxis;
     private string gripButton;
+    private Vector3 previousPosition;
+    private Vector3 previousAngularRotation;
 
-    
     void Start()
     {
         gripAxis = $"XRI_{hand}_Grip";
@@ -27,6 +31,11 @@ public class VRInput : MonoBehaviour
     void Update()
     {
         gripValue = Input.GetAxis(gripAxis);
+
+        velocity = (transform.position - previousPosition) / Time.deltaTime;
+        previousPosition = transform.position;
+        angularVelocity = (transform.eulerAngles - previousAngularRotation) / Time.deltaTime;
+        previousAngularRotation = transform.eulerAngles;
 
         if (Input.GetButtonDown(gripButton))
         {

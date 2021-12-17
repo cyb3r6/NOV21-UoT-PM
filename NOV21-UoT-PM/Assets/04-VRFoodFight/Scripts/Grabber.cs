@@ -16,6 +16,8 @@ public class Grabber : MonoBehaviour
 
     public VRInput controller;
 
+    public float throwForce = 5f;
+
     private void OnTriggerEnter(Collider other)
     {
         var grab = other.GetComponent<GrabbableObject>();
@@ -41,7 +43,6 @@ public class Grabber : MonoBehaviour
         {
             heldObject = collidingObject;
             heldObject.ParentGrab(controller);
-            Debug.Log("Grab!");
         }
     }
 
@@ -50,7 +51,11 @@ public class Grabber : MonoBehaviour
         if(heldObject)
         {
             heldObject.ParentRelease();
-            Debug.Log("Release!");
+
+            // throw
+            heldObject.grabbableRigidbody.velocity = controller.velocity * throwForce;
+            heldObject.grabbableRigidbody.angularVelocity = controller.angularVelocity * throwForce;
+            
             heldObject = null;
         }
     }
