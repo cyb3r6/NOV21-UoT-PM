@@ -36,9 +36,11 @@ public class Target : MonoBehaviour
             audioSource.PlayOneShot(hitSound);
 
             Destroy(foodStuff.gameObject);
-            Destroy(gameObject);
 
-            // tell spawnarea to let it know a target was hit
+            // tell spawnarea a target was hit
+            game.OnTargetHit();
+
+            Destroy(gameObject);
         }
     }
 }
