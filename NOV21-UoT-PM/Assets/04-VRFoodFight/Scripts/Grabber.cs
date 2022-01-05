@@ -32,7 +32,7 @@ public class Grabber : MonoBehaviour
         var grab = other.GetComponent<GrabbableObject>();
         if (grab==collidingObject)
         {
-            collidingObject.OnHoverEnd();
+            collidingObject?.OnHoverEnd();
             collidingObject = null;
         }
     }
