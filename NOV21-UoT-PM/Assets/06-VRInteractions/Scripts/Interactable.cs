@@ -1,16 +1,28 @@
-
-
-public class Interactable : GrabbableObject
+using UnityEngine;
+public abstract class Interactable : GrabbableObject
 {
- 
-    // Update is called once per frame
-    void Update()
+
+    protected override void Start()
     {
-        
+        base.Start();
+
     }
 
-    protected virtual void Interact()
+    // Update is called once per frame
+    protected virtual void Update()
     {
-        
+
+        if (controller != null)
+        {
+            if (Input.GetButtonDown($"XRI_{controller.hand}_TriggerButton"))
+            {
+                Interact();
+            }
+        }
+
+
     }
+
+    protected abstract void Interact();
+
 }

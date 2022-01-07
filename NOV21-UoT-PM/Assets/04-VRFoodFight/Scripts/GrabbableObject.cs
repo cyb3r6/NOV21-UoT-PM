@@ -11,8 +11,10 @@ public class GrabbableObject : MonoBehaviour
     public Color hoverColor;
     public Color nonHoverColor;
 
+    protected VRInput controller;
 
-    void Start()
+
+    protected virtual void Start()
     {
         grabbableRigidbody = GetComponent<Rigidbody>();
         grabbableRenderer = GetComponent<Renderer>();
@@ -30,12 +32,16 @@ public class GrabbableObject : MonoBehaviour
    
     public void  ParentGrab(VRInput controller)
     {
+        this.controller = controller;
+
         transform.SetParent(controller.transform);
         grabbableRigidbody.useGravity = false;
         grabbableRigidbody.isKinematic = true;
     }
     public void ParentRelease()
     {
+        this.controller = null;
+
         transform.SetParent(null);
         grabbableRigidbody.useGravity = true;
         grabbableRigidbody.isKinematic = false;
