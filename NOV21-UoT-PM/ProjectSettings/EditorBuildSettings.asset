@@ -6,8 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/04-VRFoodFight/Scenes/FoodFight.unity
-    guid: 5e286e2f334b6ce45a7c06223685f090
+    path: Assets/07-IntrotoARFoundation/Scenes/ARFoundation.unity
+    guid: d19ce6cba2f230040977eed88233db49
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: cc81675b3d9e9b242838bbff8f3ade2e, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f5542426220f6b4479ec98f1dd543f43, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7e29a277a77b36447ac19aa472872ec7, type: 2}
