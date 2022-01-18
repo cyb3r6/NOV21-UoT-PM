@@ -11,8 +11,6 @@ public class TapToPlace : MonoBehaviour
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private ARRaycastManager raycastManager;
 
-
-    
     void Start()
     {
         raycastManager = GetComponent<ARRaycastManager>();

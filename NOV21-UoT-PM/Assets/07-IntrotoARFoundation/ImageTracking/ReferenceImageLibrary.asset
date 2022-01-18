@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 4668419610359881470
+  m_GuidHigh: 3667159667868655777
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5529468247270628882
+      m_GuidHigh: 12282869211481156001
+    m_SerializedTextureGuid:
+      m_GuidLow: 3766149363681114566
+      m_GuidHigh: 8061883573546697595
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: merridale
+    m_Texture: {fileID: 0}
